@@ -1,0 +1,29 @@
+<script>
+	function s(str)
+	{
+		str = str.toLowerCase();
+		for(let i = 0 ; i < str.length; i++)
+			if((str[i]=='a')||(str[i]=='e')||(str[i]=='i')||(str[i]=='o')||(str[i]=='u'))
+				return i+1;
+		return 'NOT FOUND';
+	}
+	function n(num)
+	{
+		if(!(isNaN(num)))
+		{
+			num = String(num.trim());
+			num = num.split('');
+			num = num.reverse();
+			num = num.join('');
+			return num;
+		}
+		else
+			return 'NaN';
+	}
+	let strings = prompt("Enter a string: ","");
+	let numbers = prompt("Enter a number: ","");
+	let s1 = s(strings);
+	let n1 = n(numbers);
+	alert("The position of the leftmost vowel is " + s1);
+	alert("The reversed number is " + n1);
+</script>
